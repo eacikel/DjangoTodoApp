@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>N2 / Todos</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/images/icons/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex align-items-center">
+    
+          <div class="logo mr-auto">
+            <h1 class="text-light"><a href="/">{% if user.is_authenticated %}{{user.first_name|title}} {{user.last_name|upper}}{% else %}N2 / Todos{% endif %}</a></h1>
+
+          </div>
+    
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li><a href="/">Anasayfa</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="/todos/list">Yapılacaklar Listesi</a></li>
+              <li><a href="logout">Çıkış Yap</a></li>
+              {% else %}
+              <li><a href="register">Kaydol</a></li>
+              <li><a href="login">Giriş Yap</a></li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+        <div class="carousel-item active">
+            <div class="carousel-container">
+              <h2 class="animated fadeInDown">Mustafa Kemal ATATÜRK</h2>
+              <p class="animated fadeInUp">Yerinde duran, geriye gidiyor demektir… İleri, daima ileri!</p>
+            </div>
+        </div>
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Mevlana</h2>
+          <p class="animated fadeInUp">Hayatta başarılı olabilmek için üç şey lazımdır:<br>Dikkat<br>İntizam<br>Çalışmak</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Martin Luther</h2>
+          <p class="animated fadeInUp">Uçamazsan koş, koşamazsan yürü, yürüyemezsen sürün.<br>Ama ne yaparsan yap ilerlemek zorundasın.</p>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="hero-waves">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+      <defs></defs>
+      <path id="wave1" d="" />
+    </svg>
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+      <defs></defs>
+      <path id="wave2" d="" />
+    </svg>
+  </div>
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/TweenMax/TweenMax.min.js"></script>
+  <script src="static/assets/vendor/wavify/wavify.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+</html>

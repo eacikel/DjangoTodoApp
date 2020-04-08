@@ -1,0 +1,4 @@
+Bu projede django 2.2 ve postgresql kullanarak temel crud (create,read,update,delete) iþlemlerinin yer aldýðý ayný zamanda authentication olunabilen ufak bir todo app gerçekleþtirdim.
+Register formundan üye kaydý yapýlmakta ve o bilgiler doðrultusunda login olunabilmektedir. Kayýt esnasýnda alýnan ad soyad bilgisi login sonrasý kullanýcýya sað üstte gösterilmiþtir.
+Ayný zamanda user_id kullanýlarak todo listeleri kiþiye özel yapýlmýþtýr. Bir baþka kullanýcýnýn eklemiþ, düzenlemiþ veya silmiþ olduðu todo lar baþka bir kullanýcýyý etkilememektedir.
+Ýstenildiði takdirde görsel iyileþtirmeler, kiþisel bilgi deðiþtirme iþlemleri, silme gibi tehlikeli iþlemlere alert, veya flash mesajlar getirilerek geliþtirilebilir. 
